@@ -1,3 +1,3 @@
 # LZ-music-bar
 
-no done
+no done！

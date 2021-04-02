@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/commendSong/commendSong",
+    "pages/personal/personal",
+    "pages/video/video",
+    "pages/search/search",
+    "pages/songDetail/songDetail",
+    "pages/recentplay/recentplay",
+    "pages/login/login",
+    "pages/videoplay/videoplay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "LZ音乐吧",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#c0c4cc",
+    "selectedColor": "#d43c33",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "/static/images/tabBar/tab-home.png",
+        "selectedIconPath": "/static/images/tabBar/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "云村",
+        "iconPath": "/static/images/tabBar/select.png",
+        "selectedIconPath": "/static/images/tabBar/selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/static/images/tabBar/tab-my.png",
+        "selectedIconPath": "/static/images/tabBar/tab-my-current.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": ["audio"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

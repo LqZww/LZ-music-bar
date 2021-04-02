@@ -1,0 +1,36 @@
+<view class="songDetailContainer">
+  <view class="header">
+    <text class="author">{{song.ar[0].name}}</text>
+  </view>
+  <view class="circle"></view>
+  <image class="needle {{isPlay ? 'needleRotate' : ''}}" src="/static/images/song/needle.png"></image>
+  <view class="discContainer {{isPlay ? 'discAnimation' : ''}}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="musicImg" src="{{song.al.picUrl}}"></image>
+  </view>
+  <view class="musicControl">
+    <view class="headerControl">
+      <text class="iconfont icon-like"></text>
+      <text class="iconfont icon-xiazai"></text>
+      <text class="iconfont icon-chang"></text>
+      <text class="iconfont icon-liuyan"></text>
+      <text class="iconfont icon-dian"></text>
+    </view>
+    <view class="progressControl">
+      <text>{{currentTime}}</text>
+      <view class="barControl">
+        <view class="audio-currentTime-Bar" style="width:{{currentWidth + 'rpx'}}">
+          <view class="audio-circle"></view>
+        </view>
+      </view>
+      <text>{{durationTime}}</text>
+    </view>
+    <view class="footerControl">
+      <text class="iconfont icon-suijibofang"></text>
+      <text class="iconfont icon-shangyishou" bindtap="handleSwitch" id="pre"></text>
+      <text class="iconfont {{isPlay ? 'icon-zanting' : 'icon-kaishi'}}" bindtap="handleMusicPlay"></text>
+      <text class="iconfont icon-xiayishou" bindtap="handleSwitch" id="next"></text>
+      <text class="iconfont icon-liebiao"></text>
+    </view>
+  </view>
+</view>

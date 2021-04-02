@@ -1,0 +1,27 @@
+<view class="videoContainer">
+  <!-- 导航 -->
+  <scroll-view class="header" scroll-x enable-flex scroll-into-view="{{'scroll' + navId}}" scroll-with-animation>
+    <view class="main" id="{{'scroll' + item.id}}" wx:for="{{videoGroupLists}}" wx:key="id">
+      <view class="navItem {{navId === item.id ? 'active' : ''}}" bindtap="changeNav" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 视频列表 -->
+  <scroll-view refresher-enabled scroll-y enable-flex class="viedeoScroll" bindrefresherrefresh="handleRefresher" refresher-triggered="{{isTriggered}}" bindscrolltolower="handleToLower">
+    <view class="videoItem" wx:for="{{videoLists}}" wx:key="*this" data-videoId="{{item.data.vid}}" bindtap="toVideoPlay">
+      <image class="videoImg" mode="aspectFill" src="{{item.data.coverUrl}}"></image>
+      <view class="topLevel">
+        <image class="userImg" src="{{item.data.creator.avatarUrl}}"></image>
+        <!-- <text class="time">{{item.data.playTime}}</text> -->
+      </view>
+      <view class="main">
+        <text class="title">{{item.data.title}}</text>
+      </view>
+      <view class="footer">
+        <view class="playVolume">{{item.data.playTime}}</view>
+        <view class="good">{{item.data.praisedCount}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

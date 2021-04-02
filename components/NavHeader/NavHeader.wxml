@@ -1,0 +1,7 @@
+<view class="NavHeader clearfix">
+  <view class="NavHeaderFirst">{{title}}</view>
+  <view class="NavHeaderLast">
+    <text>更多</text>
+    <text class="iconfont icon-right"></text>
+  </view>
+</view>

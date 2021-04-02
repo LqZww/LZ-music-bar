@@ -1,0 +1,162 @@
+.indexContainer {
+  background-color: #eeeeee;
+}
+
+.search {
+  /* margin: 10rpx; */
+  padding: 16rpx;
+  width: 100%;
+  height: 40rpx;
+  border-radius: 20rpx;
+  background-color: #fdfdfd;
+}
+
+
+/* 轮播图 */
+.banners {
+  width: 100%;
+  height: 300rpx;
+}
+
+.banners image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 导航图标 */
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  /* border: 1rpx solid red; */
+  padding: 0 0 10rpx 0;
+}
+
+.navItem {
+  /* border: 1rpx solid red; */
+  width: 16.66%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navItem text {
+  font-size: 24rpx;
+}
+
+.ballsImg {
+  background-color: #fe3a3b;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 20rpx 0 10rpx 0;
+}
+
+/* 分割线 */
+.hrContainer .line {
+  background: #eaeaea;
+  width: 100%;
+  height: 4rpx;
+}
+
+/* 推荐歌单 */
+.recommendContainer,
+.topList {
+  /* border: 1rpx solid red; */
+  padding: 20rpx;
+}
+
+.recommendContainer .recommendMain {
+  display: flex;
+  height: 300rpx;
+  padding-top: 10rpx;
+}
+
+.recommendContainer .recommendMain .recommendMainMore {
+  position: relative;
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.recommendContainer .recommendMain .recommendMainMore .recommendImage {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+}
+
+.recommendContainer .recommendMain .recommendMainMore .recommendTextName {
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommendContainer .recommendMain .recommendMainMore .recommendTextNum {
+  border: 1rpx solid #cccccc;
+  border-radius: 10rpx;
+  background-color: transparent;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  right: 10rpx;
+  padding: 4rpx 10rpx;
+}
+
+/* 排行榜 */
+.topList .topListSwiper {
+  height: 500rpx;
+}
+
+.topList .topListSwiper swiper-item {
+  border: 1rpx solid #f8f8f8;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+
+.topList .topListSwiper .swiperItem .title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: 500;
+}
+
+.topList .topListSwiper .swiperItem .musicItem {
+  display: flex;
+  width: 94%;
+  margin: 0 0 20rpx 20rpx;
+}
+
+.topList .topListSwiper .swiperItem .musicItem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+}
+
+.topList .topListSwiper .swiperItem .musicItem .count {
+  width: 70rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+
+.topList .topListSwiper .swiperItem .musicItem .musicName {
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+
+
+.topList .topListSwiper .swiperItem .musicItem .musicAuthor {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 22rpx;
+  color: #969696;
+}

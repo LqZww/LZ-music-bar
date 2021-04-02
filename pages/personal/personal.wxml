@@ -1,0 +1,64 @@
+<view class="personalContainer">
+  <!-- 登陆 -->
+  <view class="login">
+    <view class="toLogin" bindtap="toLogin">
+      <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/static/images/avatar.jpg'}}"></image>
+      <text class="gologin">{{userInfo.nickname ? userInfo.nickname : '立即登录'}}</text>
+      <text class="iconfont icon-right" wx:if="{{!userInfo.nickname}}"></text>
+    </view>
+  </view>
+  <view class="pullDown" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd" style="transform:{{coverTransform}};transition:{{coverTransition}}">
+    <!-- 列表 -->
+    <view class="lists">
+      <view class="listItem">
+        <text class="iconfont icon-yunpan"></text>
+        <text>本地/下载</text>
+      </view>
+      <view class="listItem">
+        <text class="iconfont icon-yunpan"></text>
+        <text>云盘</text>
+      </view>
+      <view class="listItem">
+        <text class="iconfont icon-yunpan"></text>
+        <text>已购</text>
+      </view>
+      <view class="listItem" bindtap="toRecentPlay">
+        <text class="iconfont icon-bofangquanbu"></text>
+        <text>最近播放</text>
+      </view>
+      <view class="listItem">
+        <text class="iconfont icon-haoyou"></text>
+        <text>我的好友</text>
+      </view>
+      <view class="listItem">
+        <text class="iconfont icon-shoucang"></text>
+        <text>收藏和赞</text>
+      </view>
+      <view class="listItem">
+        <text class="iconfont icon-yunpan"></text>
+        <text>我的博客</text>
+      </view>
+      <view class="listItem">
+        <text class="iconfont icon-yunpan"></text>
+        <text>音乐应用</text>
+      </view>
+    </view>
+    <!-- 喜欢的音乐 -->
+    <view class="loveMusic">
+      <image src="/static/img.jpg"></image>
+      <view class="loveMusicItem">
+        <text>我喜欢的音乐</text>
+        <text>28首</text>
+      </view>
+      <view class="heartbeat">心动模式</view>
+    </view>
+    <!-- 创建歌单、收藏歌单、歌单助手按钮 -->
+    <view class="setBtn">
+      <view>创建歌单</view>
+      <view>收藏歌单</view>
+      <view>歌单助手</view>
+    </view>
+    <!-- 创建歌单 -->
+    <view class="setSongList"></view>
+  </view>
+</view>

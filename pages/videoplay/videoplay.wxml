@@ -1,0 +1,24 @@
+<view class="videoPlay">
+  <video id="video" bindtimeupdate="getTime" controls="{{false}}" enable-play-gesture play-btn-position="center" src="{{playVideoList.url}}" autoplay loop data-id="{{playVideoList.id}}"></video>
+  <view class="footer">
+    <view class="ring" style="width:{{currentWidth + 'rpx'}}"></view>
+  </view>
+  <view class="btn">
+    <view class="good">
+      <view class="iconfont icon-dianzan"></view>
+      <text class="count">{{videoDetailInfoData.likedCount}}</text>
+    </view>
+    <view class="leaveWord">
+      <view class="iconfont icon-liuyan"></view>
+      <text class="count">{{videoDetailInfoData.commentCount}}</text>
+    </view>
+    <view class="share">
+      <view class="iconfont icon-share"></view>
+      <text class="count">{{videoDetailInfoData.shareCount}}</text>
+    </view>
+    <view class="collect">
+      <view class="iconfont icon-shoucang"></view>
+      <view class="count">收藏</view>
+    </view>
+  </view>
+</view>

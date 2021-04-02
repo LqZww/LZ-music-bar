@@ -1,0 +1,17 @@
+<view class="recentPlay">
+  <view class="navBar">
+    <scroll-view class="scrollNavBar" enable-flex scroll-x>
+      <view class="main" wx:for="{{navBarList}}" wx:key="{{title}}">
+        <text class="title">{{item.title}}</text>
+        <text class="num">{{item.num}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="songLists">
+    <view class="songlist" wx:if="{{allSongPlayRecord.length}}" wx:for="{{allSongPlayRecord}}" wx:key="{{id}}">
+      <view class="songName">{{item.song.name}}</view>
+      <view class="author">{{item.song.ar[0].name}}</view>
+    </view>
+    <!-- <view wx:else>暂无播放记录</view> -->
+  </view>
+</view>

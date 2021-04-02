@@ -1,0 +1,55 @@
+<view class="indexContainer">
+  <!-- 搜索 -->
+  <view class="search" bindtap="toSearch">
+    <text class="iconfont icon-search"></text>
+    <view class="content"></view>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="banners" indicator-dots autoplay circular indicator-color="#b4c3be" indicator-active-color="#bb0b0b">
+    <swiper-item wx:for="{{picLists}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 导航图标 -->
+  <view class="navContainer">
+    <view class="navItem" wx:for="{{balls}}" wx:key="id" data-type="{{item.name}}" bindtap="toDetail">
+      <image class="ballsImg" src="{{item.iconUrl}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="hrContainer">
+    <view class="line"></view>
+  </view>
+  <!-- 推荐歌单 -->
+  <view class="recommendContainer">
+    <NavHeader title="推荐歌单"></NavHeader>
+    <scroll-view class="recommendMain" enable-flex scroll-x>
+      <view class="recommendMainMore" wx:for="{{songLists}}" wx:key="id">
+        <!-- <text class="recommendTextNum">{{item.playCount}}</text> -->
+        <image class="recommendImage" src="{{item.picUrl}}"></image>
+        <text class="recommendTextName">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜 -->
+  <view class="topList">
+    <NavHeader title="排行榜"></NavHeader>
+    <swiper class="topListSwiper" next-margin="50rpx">
+      <swiper-item wx:for="{{topLists}}" wx:key="name">
+        <view class="swiperItem">
+          <view class="title">
+            <text>{{item.name}}</text>
+            <text class="iconfont icon-right"></text>
+          </view>
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="song" data-id="{{song.id}}" bindtap="toSongDetail">
+            <image src="{{song.al.picUrl}}"></image>
+            <text class="count">{{index + 1}}</text>
+            <text class="musicName">{{song.name}}</text>
+            <text class="musicAuthor" decode>&nbsp;-&nbsp;{{song.ar[0].name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

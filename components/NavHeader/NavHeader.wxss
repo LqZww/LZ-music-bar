@@ -1,0 +1,25 @@
+@import '/static/iconfont/iconfont.wxss';
+
+.NavHeader {
+  /* border: 1rpx solid red; */
+  margin-bottom: 10rpx;
+}
+
+.NavHeader .NavHeaderFirst {
+  float: left;
+  font-size: 32rpx;
+  font-weight: 600;
+  /* border: 1rpx solid red; */
+}
+
+.NavHeader .NavHeaderLast {
+  float: right;
+  border: 1rpx solid #eaeaea;
+  border-radius: 30rpx;
+  padding: 10rpx 14rpx;
+  font-size: 24rpx;
+}
+
+.icon-right {
+  font-size: 26rpx;
+}

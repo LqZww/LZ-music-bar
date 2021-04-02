@@ -1,0 +1,49 @@
+/* 导航条 */
+.navBar {}
+
+.navBar .scrollNavBar {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.navBar .scrollNavBar .main {
+  min-width: 160rpx;
+  display: flex;
+  justify-content: center;
+  color: #666666;
+}
+
+.navBar .scrollNavBar .main .title {
+  font-size: 26rpx;
+}
+
+.navBar .scrollNavBar .main .num {
+  font-size: 22rpx;
+  margin-top: -10rpx;
+  margin-left: 4rpx;
+}
+
+/* 歌曲列表 */
+.songLists {
+  padding: 20rpx;
+  /* border: 1rpx solid red; */
+}
+
+.songLists .songlist {
+  /* border: 1rpx solid blue; */
+  display: flex;
+  flex-direction: column;
+  padding: 14rpx 0;
+}
+
+.songLists .songlist .songName {
+  /* border: 1rpx solid red; */
+
+}
+
+.songLists .songlist .author {
+  /* border: 1rpx solid yellow; */
+  color: #808080;
+  font-size: 20rpx;
+}
